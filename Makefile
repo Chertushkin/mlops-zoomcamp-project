@@ -27,7 +27,12 @@ requirements: test_environment
 
 ## Make Dataset
 data: requirements
-	$(PYTHON_INTERPRETER) src/data/make_dataset.py data/raw data/processed
+	$(PYTHON_INTERPRETER) project/data/make_dataset.py data/raw data/processed
+
+## Make Dataset
+extract_raw_data:
+	$(PYTHON_INTERPRETER) project/data/exract_raw_dataset.py data/raw/hubmap-organ-segmentation.zip data/processed
+
 
 ## Delete all compiled Python files
 clean:
